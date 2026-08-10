@@ -7,8 +7,4 @@ public class ProdutoNaoPerecivel extends Produto{
     {
         super(desc,precoCusto);
     }
-    public int valorVenda()
-    {
-        return 1;
-    }
 }
