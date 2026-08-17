@@ -1,4 +1,5 @@
 import java.text.NumberFormat;
+import java.util.Objects;
 
 public abstract class Produto {
 	
@@ -72,8 +73,10 @@ public abstract class Produto {
      * @return booleano true/false conforme o parâmetro possua a descrição igual ou não a este produto.
      */
     @Override
-    public boolean equals(Object obj) {
-        return false;
+    public boolean equals(Object obj) 
+    {
+     Produto produto = (Produto) obj;        
+     return Objects.equals(produto.descricao, this.descricao);
     }
     
     /**

@@ -36,6 +36,12 @@ public class ProdutoNaoPerecivel extends Produto{
      */
 	@Override
     public String gerarDadosTexto() {
-    	return null;
+     StringBuilder dados = new StringBuilder();
+     dados.append("1;");
+     dados.append(descricao + ";");
+     dados.append(String.format("%.2f", precoCusto) + ";");
+     dados.append(String.format("%.2f", margemLucro));
+     String finalString = dados.toString();
+     return finalString;
     }
 }

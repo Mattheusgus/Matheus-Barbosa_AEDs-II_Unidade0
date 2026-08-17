@@ -97,6 +97,13 @@ public class ProdutoPerecivel extends Produto{
      */
 	@Override
     public String gerarDadosTexto() {
-		return null;
+		StringBuilder dados = new StringBuilder();
+		dados.append("2;");
+		dados.append(descricao + ";");
+		dados.append(String.format("%.2f", precoCusto) + ";");
+		dados.append(String.format("%.2f", margemLucro) + ";");
+		dados.append(dataDeValidade.format(DateTimeFormatter.ofPattern("dd/MM/yyyy")));
+		String finalString = dados.toString();
+		return finalString;
 	}
 }
